@@ -9,6 +9,7 @@
   "author": "Yannick Sereckissy",
   "license": "ISC",
   "dependencies": {
-    "graphql": "^15.4.0"
+    "graphql": "^15.4.0",
+    "mongodb": "^3.6.3"
   }
 }

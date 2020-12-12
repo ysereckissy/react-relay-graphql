@@ -16,7 +16,8 @@ MongoClient.connect(DB_URL, (err, client) => {
   const db = client.db('test');
   App.use('/graphql', graphqlHTTP({
     schema: exampleSchema,
-    context: { db }
+    context: { db },
+    graphiql: true
   }));
   App.listen(5000, () => console.log('Running Express.js on port 5000'));
   /// the readline interface code goes here!

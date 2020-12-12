@@ -16,7 +16,13 @@ const queryType = new GraphQLObjectType({
     },
     diceRoll: {
       type: new GraphQLList(GraphQLInt),
-      resolve: () => [roll(), roll()],
+      args: {
+        count: {
+          type: GraphQLInt,
+          defaultValue: 2
+        }
+      },
+      resolve: (_, args) => new Array(args.count).fill(args.count).map((_) => roll()),
     }
   }
 });

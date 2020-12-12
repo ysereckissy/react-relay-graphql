@@ -1,0 +1,14 @@
+{
+  "name": "graphql-project",
+  "version": "1.0.0",
+  "description": "react and graphql by relay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yannick Sereckissy",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^15.4.0"
+  }
+}

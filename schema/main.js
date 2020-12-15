@@ -27,6 +27,7 @@ const EmployeeType = new GraphQLObjectType({
   fields: () => ({
     name: {
       type: GraphQLString,
+      deprecationReason: 'Use nameForCase instead',
       args: {
         upperCase: {
           type: GraphQLBoolean,

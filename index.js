@@ -1,5 +1,4 @@
 const { graphql } = require('graphql');
-const readline = require('readline');
 const { MongoClient } = require('mongodb');
 const assert = require('assert');
 const { graphqlHTTP } = require('express-graphql');
@@ -20,15 +19,4 @@ MongoClient.connect(DB_URL, (err, client) => {
     graphiql: true
   }));
   App.listen(5000, () => console.log('Running Express.js on port 5000'));
-  /// the readline interface code goes here!
-  const rli = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
-  rli.question('Client Request: ', inputQuery => {
-    graphql(exampleSchema, inputQuery, {}, { db }).then(result => {
-      console.log('Server Answer: ', result.data);
-      client.close(() => rli.close());
-    });
-  })
-})
+});

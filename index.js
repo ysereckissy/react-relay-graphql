@@ -7,7 +7,7 @@ const express = require('express');
 const exampleSchema = require('./schema/main');
 
 App = express();
-
+App.use(express.static('public'));
 const DB_URL = 'mongodb://localhost:27017';
 MongoClient.connect(DB_URL, (err, client) => {
   assert.equal(null, err);
